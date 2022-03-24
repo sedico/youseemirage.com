@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<title>document title</title>
+</head>
+
+<body bgcolor="orange" text="white">
+<h1> Welcome for cheating bruh...</h1>
+<p>hello akash here! for your help.
+ your code is here :-
+
+%Gauss seidel method
+<br> clc
+<br>clear all
+<br>a=[10,8,-3,1;2,10,1,-4;3,-4,10,1;2,2,-3,10];
+<br>b=[16;9;10;11];
+   <br> e=input('tolerence:');
+   <br> n=length(b);
+   <br> N=input('Maximum no iteration:');
+  <br>  x=zeros(n,1);
+<br>    x0=zeros(n,1);
+  <br>  k=1;
+   <br> while k<=N
+   <br> for i=1:n
+  <br>      sum1=0;
+   <br>    for j=1:i-1
+    <br>        sum1=sum1+a(i,j)*x(j);
+    <br>    end
+    <br>    sum2=0;
+   <br>    for j=i+1:n
+     <br>      sum2=sum2+a(i,j)*x0(j);
+   <br>    end
+  <br>     x(i)=(b(i)-sum1-sum2)/a(i,i);
+  <br>  end
+ <br>   if norm(x-x0,inf)<e
+  <br>      fprintf('iteration=%d\n',k);
+   <br>     fprintf('solution %d\n',x);
+  <br>      break;
+  <br>  end
+<br>    k=k+1;
+ <br>   x0=x;
+ <br>   end
+</br>
+</p> 
+</body>
+</html>
